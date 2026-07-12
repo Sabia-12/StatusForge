@@ -3,7 +3,7 @@
 
 ![Hero screenshot](docs/screenshots/hero.png)
 
-[![CI Pipeline](https://github.com/your-org/statusforge/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/statusforge/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) **Live demo -> [https://status-forge-eight.vercel.app/]**
+[![CI Pipeline](https://github.com/Sabia-12/statusforge/actions/workflows/ci.yml/badge.svg)](https://github.com/Sabia-12/statusforge/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) **Live demo -> https://status-forge-eight.vercel.app/**
 
 ## Features
 
@@ -22,7 +22,7 @@ Next.js · TypeScript · PostgreSQL (Prisma) · Tailwind · Auth.js · Vercel
 ## Quick Start
 
 ```bash
-git clone https://github.com/Sabia-12/StatusForge && cd statusforge
+git clone https://github.com/Sabia-12/StatusForge && cd StatusForge
 cp .env.example .env            # then fill in values
 npm install
 npm run db:migrate && npm run db:seed
