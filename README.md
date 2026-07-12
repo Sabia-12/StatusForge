@@ -1,5 +1,7 @@
 # StatusForge
 > Public status pages with incident timelines for engineering teams.
+> Built for the Digital Heroes Full Stack Developer Trial.
+
 
 ![Hero screenshot](docs/screenshots/hero.png)
 
