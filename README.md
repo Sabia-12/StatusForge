@@ -40,7 +40,7 @@ npm run dev                    # http://localhost:3000
 
 ## Architecture
 
-StatusForge is built using a tenant-isolated Next.js App Router pattern. Session identities carry client roles and organization contexts within signed JWT tokens to secure Server Action mutations. One diagram beats a page of prose. Read the details in [docs/architecture.md](docs/architecture.md).
+StatusForge is built using a tenant-isolated Next.js App Router pattern. Session identities carry client roles and organization contexts within signed JWT tokens to secure Server Action mutations. Read the details in [docs/architecture.md](docs/architecture.md).
 
 ## Testing
 
@@ -75,6 +75,6 @@ MIT — see LICENSE.
 ---
 
 ### Demo credentials
-If the app has auth, put a read-only demo login in the README. Use this to review without registering:
+Use this to explore without creating an account:
 - **Email:** `demo@demo.com`
 - **Password:** `demo1234`
