@@ -4,9 +4,14 @@ import { prisma } from '@/lib/prisma';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
-  const orgs = await prisma.organization.findMany({
-    select: { slug: true, updatedAt: true },
-  });
+  let orgs: { slug: string; updatedAt: Date }[] = [];
+  try {
+    orgs = await prisma.organization.findMany({
+      select: { slug: true, updatedAt: true },
+    });
+  } catch (error) {
+    console.warn('Sitemap generation failed to query database:', error);
+  }
 
   const orgUrls = orgs.map((org) => ({
     url: `${baseUrl}/status/${org.slug}`,

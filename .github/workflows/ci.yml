@@ -9,6 +9,11 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    env:
+      SUPABASE_DATABASE_URL: "postgresql://postgres:postgres@localhost:5432/postgres"
+      NEXTAUTH_SECRET: "ci-secret-not-for-production"
+      NEXTAUTH_URL: "http://localhost:3000"
+      NEXT_PUBLIC_SITE_URL: "http://localhost:3000"
 
     steps:
       - name: Checkout code
@@ -37,8 +42,3 @@ jobs:
 
       - name: Build application
         run: npm run build
-        env:
-          DATABASE_URL: "file:./dev.db"
-          NEXTAUTH_SECRET: "ci-secret-not-for-production"
-          NEXTAUTH_URL: "http://localhost:3000"
-          NEXT_PUBLIC_SITE_URL: "http://localhost:3000"
