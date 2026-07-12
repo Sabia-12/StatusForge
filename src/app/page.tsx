@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 export default function LandingPage() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://statusforge.vercel.app';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://status-forge-eight.vercel.app';
 
   const jsonLd = {
     '@context': 'https://schema.org',
