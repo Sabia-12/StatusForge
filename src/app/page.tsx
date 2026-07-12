@@ -7,12 +7,14 @@ export const metadata = {
 };
 
 export default function LandingPage() {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://statusforge.vercel.app';
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'SoftwareApplication',
-        '@id': 'https://statusforge.com/#software',
+        '@id': `${siteUrl}/#software`,
         'name': 'StatusForge',
         'applicationCategory': 'BusinessApplication',
         'operatingSystem': 'All',
@@ -25,7 +27,7 @@ export default function LandingPage() {
       },
       {
         '@type': 'FAQPage',
-        '@id': 'https://statusforge.com/#faq',
+        '@id': `${siteUrl}/#faq`,
         'mainEntity': [
           {
             '@type': 'Question',
